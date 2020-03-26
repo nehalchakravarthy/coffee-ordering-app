@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="860.0" prefWidth="1420.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="coffee.ordering.app.AdminController">
+   <children>
+      <TableView fx:id="orderTable" layoutX="61.0" layoutY="58.0" prefHeight="415.0" prefWidth="1001.0">
+        <columns>
+          <TableColumn fx:id="phone" prefWidth="150.0" text="Phone" />
+          <TableColumn fx:id="type" prefWidth="243.0" text="Coffee type" />
+            <TableColumn fx:id="quantity" prefWidth="94.0" text="Quantity" />
+            <TableColumn fx:id="wc" prefWidth="125.0" text="Whipped Cream" />
+            <TableColumn fx:id="c" prefWidth="82.0" text="Chocolate" />
+            <TableColumn fx:id="n" prefWidth="63.0" text="Nutella" />
+            <TableColumn fx:id="amount" prefWidth="104.0" text="Amount" />
+            <TableColumn fx:id="payment" prefWidth="138.0" text="Payment method" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

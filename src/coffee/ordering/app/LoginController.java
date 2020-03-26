@@ -58,8 +58,8 @@ public class LoginController implements Initializable {
             if(user.equals("admin") && pass.equals("admin"))
             {
                 Stage adminStage = new Stage();
-                Pane root = FXMLLoader.load(getClass().getResource("Payment.fxml"));
-                adminStage.setScene(new Scene(root, 1024, 725));
+                Pane root = FXMLLoader.load(getClass().getResource("admin.fxml"));
+                adminStage.setScene(new Scene(root, 1420, 860));
                 adminStage.show();
                 adminStage.setResizable(false);
             
