@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1024.0" style="-fx-background-color: #2b536a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffee.ordering.app.LoginController">
+   <children>
+      <Text fill="#1cbded" layoutX="627.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="186.0">
+         <font>
+            <Font size="52.0" />
+         </font>
+      </Text>
+      <CheckBox layoutX="573.0" layoutY="399.0" mnemonicParsing="false" text="Remember Me" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <JFXButton fx:id="login" buttonType="RAISED" layoutX="778.0" layoutY="387.0" onAction="#login" style="-fx-background-color: #29B6F6;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="465.0" fitWidth="724.0" layoutX="-158.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@Images/1128996.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="224.0" fitWidth="193.0" layoutX="108.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/baseline_emoji_food_beverage_black_48.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="141.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coffee" textAlignment="CENTER">
+         <font>
+            <Font name="Serif Regular" size="38.0" />
+         </font>
+      </Text>
+      <Text layoutX="116.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ordering" textAlignment="CENTER">
+         <font>
+            <Font name="Serif Regular" size="38.0" />
+         </font>
+      </Text>
+      <Text layoutX="165.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="App" textAlignment="CENTER">
+         <font>
+            <Font name="Serif Regular" size="38.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="username" focusColor="#aeaeae" layoutX="612.0" layoutY="203.0" prefHeight="51.0" prefWidth="281.0" promptText="Enter username" style="-fx-background-color: #e0e0e0;" unFocusColor="#aeaeae">
+         <font>
+            <Font name="Lucida Sans Regular" size="16.0" />
+         </font>
+         <opaqueInsets>
+            <Insets left="5.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="25.0" />
+         </padding>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" focusColor="#aeaeae" layoutX="612.0" layoutY="292.0" prefHeight="51.0" prefWidth="281.0" promptText="Enter password" style="-fx-background-color: #E0E0E0;" unFocusColor="#aeaeae">
+         <font>
+            <Font name="Lucida Sans Regular" size="16.0" />
+         </font>
+         <opaqueInsets>
+            <Insets left="50.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="25.0" />
+         </padding>
+      </JFXPasswordField>
+      <ImageView fitHeight="46.0" fitWidth="76.0" layoutX="550.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/baseline_person_outline_black_48dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="553.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/baseline_lock_open_black_48dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="193.0" fitWidth="616.0" layoutX="408.0" layoutY="533.0" pickOnBounds="true">
+         <image>
+            <Image url="@Images/download.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="signup" buttonType="RAISED" layoutX="621.0" layoutY="622.0" onAction="#signup" style="-fx-background-color: #29B6F6;" text="Sign Up Here" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="61.0" fitWidth="60.0" layoutX="686.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/or-4ffff8bea375f40762e55ae55b392b17.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="649.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New User?" textAlignment="CENTER">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

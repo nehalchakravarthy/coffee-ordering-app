@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="860.0" prefWidth="1420.0" style="-fx-background-color: #2b536a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffee.ordering.app.OrderController">
+   <children>
+      <ImageView fitHeight="842.0" fitWidth="860.0" layoutX="-19.0" layoutY="9.0" pickOnBounds="true" rotate="90.0">
+         <image>
+            <Image url="@Images/1128996.jpg" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="whippedCream" layoutX="919.0" layoutY="358.0" mnemonicParsing="false" text="Whipped Cream (Rs. 10)" textFill="#a0a2ab">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <TextField fx:id="quantity" layoutX="1159.0" layoutY="535.0" prefHeight="38.0" prefWidth="88.0" promptText="Quantity">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </TextField>
+      <Text fill="#1cbded" layoutX="995.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Here" textAlignment="CENTER" AnchorPane.topAnchor="72.732421875">
+         <font>
+            <Font size="52.0" />
+         </font>
+      </Text>
+      <Text fill="#dddddd" layoutX="914.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coffee Type:">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="chocolate" layoutX="919.0" layoutY="408.0" mnemonicParsing="false" text="Chocolate (Rs. 10)" textFill="#a0a2ab">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="nutella" layoutX="919.0" layoutY="458.0" mnemonicParsing="false" text="Nutella (Rs. 10)" textFill="#a0a2ab">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <Text fill="#dddddd" layoutX="919.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toppings:">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="221.0" fitWidth="210.0" layoutX="39.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/iced%20coffee.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="226.0" fitWidth="210.0" layoutX="39.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/latte.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="210.0" fitWidth="217.0" layoutX="300.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/espresso.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="210.0" fitWidth="210.0" layoutX="300.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/cappuccino.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="210.0" fitWidth="218.0" layoutX="567.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/flat%20white.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="210.0" fitWidth="210.0" layoutX="568.0" layoutY="618.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/mocha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="210.0" fitWidth="210.0" layoutX="301.0" layoutY="618.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/macchiato.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="210.0" fitWidth="268.0" layoutX="567.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/americano.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="210.0" fitWidth="210.0" layoutX="38.0" layoutY="618.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/cortado.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="332.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU">
+         <font>
+            <Font name="Purisa" size="52.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="coffeeType" blendMode="ADD" layoutX="1131.0" layoutY="197.0" prefHeight="40.0" prefWidth="197.0" promptText="Choose" unFocusColor="#aeaeae">
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </JFXComboBox>
+      <Text fill="#dddddd" layoutX="988.0" layoutY="562.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="orderButton" buttonType="RAISED" layoutX="1173.0" layoutY="625.0" onAction="#order" prefHeight="56.0" prefWidth="146.0" style="-fx-background-color: #29B6F6;" text="Order" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="logout" buttonType="RAISED" layoutX="1057.0" layoutY="733.0" onAction="#logout" style="-fx-background-color: #FF5B5B;" text="Log out" textFill="WHITE">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="913.0" layoutY="625.0" onAction="#clear" prefHeight="56.0" prefWidth="186.0" style="-fx-background-color: #dadada;" text="Clear fields">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
