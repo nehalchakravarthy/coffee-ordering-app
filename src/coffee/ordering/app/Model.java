@@ -12,10 +12,10 @@ package coffee.ordering.app;
 public class Model {
     
     String phone,type,payment;
-    boolean wc,c,n;
+    boolean wc,c,n,deliver;
     int quantity,amount;
 
-    public Model(String phone, String type, int quantity, boolean wc, boolean c, boolean n, int amount,String payment) {
+    public Model(String phone, String type, int quantity, boolean wc, boolean c, boolean n, int amount,String payment, boolean deliver) {
         this.phone = phone;
         this.type = type;
         this.payment = payment;
@@ -24,6 +24,7 @@ public class Model {
         this.n = n;
         this.quantity = quantity;
         this.amount = amount;
+        this.deliver = deliver;
     }
 
     public String getPhone() {
@@ -89,90 +90,13 @@ public class Model {
     public void setAmount(int amount) {
         this.amount = amount;
     }
-    
-    
-    
-    
-    
-    
-    /*
-    String phone,type,quantity,wc,c,n,amount,payment;
 
-    public Model(String phone, String type, String quantity, String wc, String c, String n, String amount, String payment) {
-        this.phone = phone;
-        this.type = type;
-        this.quantity = quantity;
-        this.wc = wc;
-        this.c = c;
-        this.n = n;
-        this.amount = amount;
-        this.payment = payment;
+    public boolean getDeliver() {
+        return deliver;
     }
 
-    public String getPhone() {
-        return phone;
+    public void setDeliver(boolean deliver) {
+        this.deliver = deliver;
     }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getWc() {
-        return wc;
-    }
-
-    public void setWc(String wc) {
-        this.wc = wc;
-    }
-
-    public String getC() {
-        return c;
-    }
-
-    public void setC(String c) {
-        this.c = c;
-    }
-
-    public String getN() {
-        return n;
-    }
-
-    public void setN(String n) {
-        this.n = n;
-    }
-
-    public String getAmount() {
-        return amount;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
-    }
-
-    public String getPayment() {
-        return payment;
-    }
-
-    public void setPayment(String payment) {
-        this.payment = payment;
-    }
-    
-    */
     
 }
