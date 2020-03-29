@@ -73,6 +73,7 @@ public class OrderController implements Initializable {
         }
     }
     
+    @FXML
     public void order() {
         int wc=0,c=0,n=0;
         
@@ -88,10 +89,10 @@ public class OrderController implements Initializable {
         phoneNo = LoginController.phone;
         
         String sql = "INSERT INTO `orders` (`phone`, `type`, `quantity`, `whipped cream`, `chocolate`, "
-                + "`nutella`, `amount`, `payment`) "
+                + "`nutella`, `amount`, `payment`, `delivery`) "
                 + "VALUES ('"+phoneNo+"','"+coffeeType.getValue()+"', "
                 + "'"+quantity.getText()+"',"
-                + " '"+wc+"', '"+c+"',  '"+n+"', '"+amount+"', '"+null+"')";
+                + " '"+wc+"', '"+c+"',  '"+n+"', '"+amount+"', '"+null+"', '0')";
         
         try {
             //Write to database
@@ -118,6 +119,7 @@ public class OrderController implements Initializable {
         } 
     }
     
+    @FXML
     public void clear() {
         quantity.setText(null);
         whippedCream.setSelected(false);
@@ -127,6 +129,7 @@ public class OrderController implements Initializable {
         amount=0;
     }
     
+    @FXML
     public void logout() {
         try {
             Stage loginStage = new Stage();
