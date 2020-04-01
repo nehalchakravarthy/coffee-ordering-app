@@ -9,6 +9,7 @@ import java.net.URL;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -38,7 +39,7 @@ public class RegisterController implements Initializable {
 
     @FXML
     private Button loginButton = new Button();
-    
+
     Statement statement;
 
     /**
@@ -47,34 +48,41 @@ public class RegisterController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         connectDB();
-    }    
-    
-    public void signup(){
-        
-        String sql = "INSERT INTO `users` (`phone`, `username`, `password`) VALUES ('"+phone.getText()+"', '"+username.getText()+"', '"+password.getText()+"')";
-        try {
-            statement.executeUpdate(sql);
-            
-            Alert orderPlaced = new Alert(Alert.AlertType.INFORMATION);
-            orderPlaced.setTitle("User created");
-            orderPlaced.setContentText("Your account has been created!\nPlease login to continue!");
-            orderPlaced.setHeaderText(null);
-            orderPlaced.showAndWait();
-            
-            Stage loginStage = new Stage();
-            Pane root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-            loginStage.setScene(new Scene(root, 1024, 725));
-            loginStage.show();
-            loginStage.setResizable(false);
-            
-            Stage stage = (Stage) loginButton.getScene().getWindow();
-            stage.close();            
-        }
-        catch(Exception e) {
-            System.out.println(e.getMessage());
+    }
+
+    public void signup() {
+
+        if (Pattern.compile("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}").matcher(password.getText()).find()) {
+            String sql = "INSERT INTO `users` (`phone`, `username`, `password`) VALUES ('" + phone.getText() + "', '" + username.getText() + "', '" + password.getText() + "')";
+            try {
+                statement.executeUpdate(sql);
+
+                Alert orderPlaced = new Alert(Alert.AlertType.INFORMATION);
+                orderPlaced.setTitle("User created");
+                orderPlaced.setContentText("Your account has been created!\nPlease login to continue!");
+                orderPlaced.setHeaderText(null);
+                orderPlaced.showAndWait();
+
+                Stage loginStage = new Stage();
+                Pane root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+                loginStage.setScene(new Scene(root, 1024, 725));
+                loginStage.show();
+                loginStage.setResizable(false);
+
+                Stage stage = (Stage) loginButton.getScene().getWindow();
+                stage.close();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        } else {
+            Alert invalidPW = new Alert(Alert.AlertType.ERROR);
+            invalidPW.setTitle("Invalid Password!");
+            invalidPW.setContentText("Password must contain an uppercase letter, a lowercase letter and a digit (8-16 characters)");
+            invalidPW.setHeaderText(null);
+            invalidPW.showAndWait();
         }
     }
-    
+
     @FXML
     public void login() {
         try {
@@ -83,14 +91,14 @@ public class RegisterController implements Initializable {
             loginStage.setScene(new Scene(root, 1024, 725));
             loginStage.show();
             loginStage.setResizable(false);
-            
+
             Stage stage = (Stage) loginButton.getScene().getWindow();
             stage.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-    
+
     public void connectDB() {
 
         //Connect to MySQL database
