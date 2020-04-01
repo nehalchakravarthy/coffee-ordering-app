@@ -52,7 +52,7 @@ public class RegisterController implements Initializable {
 
     public void signup() {
 
-        if (Pattern.compile("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}").matcher(password.getText()).find()) {
+        if (Pattern.compile("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}").matcher(password.getText()).matches()) {
             String sql = "INSERT INTO `users` (`phone`, `username`, `password`) VALUES ('" + phone.getText() + "', '" + username.getText() + "', '" + password.getText() + "')";
             try {
                 statement.executeUpdate(sql);
