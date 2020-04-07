@@ -40,7 +40,7 @@ On implementing this application it can be seen that a lot of time and energy of
 ## Instructions to run the application
 1. Install XAMPP
 
-2. Set username as "root" and password ""
+2. Set username as "root" and password " " (blank)
 
 3. Open localhost/phpmyadmin
 
