@@ -1,23 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="860.0" prefWidth="1420.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="coffee.ordering.app.AdminController">
+<AnchorPane id="AnchorPane" prefHeight="860.0" prefWidth="1420.0" style="-fx-background-color: #2b536a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffee.ordering.app.AdminController">
    <children>
-      <TableView fx:id="orderTable" layoutX="61.0" layoutY="58.0" prefHeight="415.0" prefWidth="1001.0">
+      <TableView fx:id="orderTable" blendMode="SCREEN" layoutX="117.0" layoutY="177.0" prefHeight="308.0" prefWidth="1192.0">
         <columns>
           <TableColumn fx:id="phone" prefWidth="150.0" text="Phone" />
-          <TableColumn fx:id="type" prefWidth="243.0" text="Coffee type" />
-            <TableColumn fx:id="quantity" prefWidth="94.0" text="Quantity" />
-            <TableColumn fx:id="wc" prefWidth="125.0" text="Whipped Cream" />
-            <TableColumn fx:id="c" prefWidth="82.0" text="Chocolate" />
-            <TableColumn fx:id="n" prefWidth="63.0" text="Nutella" />
-            <TableColumn fx:id="amount" prefWidth="104.0" text="Amount" />
-            <TableColumn fx:id="payment" prefWidth="138.0" text="Payment method" />
+          <TableColumn fx:id="type" prefWidth="231.0" text="Coffee type" />
+            <TableColumn fx:id="quantity" prefWidth="110.0" text="Quantity" />
+            <TableColumn fx:id="wc" prefWidth="142.0" text="Whipped Cream" />
+            <TableColumn fx:id="c" prefWidth="97.0" text="Chocolate" />
+            <TableColumn fx:id="n" prefWidth="84.0" text="Nutella" />
+            <TableColumn fx:id="amount" prefWidth="114.0" text="Amount" />
+            <TableColumn fx:id="payment" prefWidth="150.0" text="Payment method" />
+            <TableColumn fx:id="delivered" prefWidth="113.0" text="Delivered" />
         </columns>
       </TableView>
+      <Text fill="#1cbded" layoutX="517.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Orders" textAlignment="CENTER">
+         <font>
+            <Font size="52.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="phoneSearch" blendMode="ADD" layoutX="321.0" layoutY="539.0" promptText="Enter phone number" unFocusColor="#aeaeae">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXTextField>
+      <CheckBox fx:id="deliver" layoutX="322.0" layoutY="617.0" mnemonicParsing="false" text="Mark as delivered" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </CheckBox>
+      <JFXButton fx:id="update" buttonType="RAISED" layoutX="872.0" layoutY="567.0" onAction="#update" style="-fx-background-color: #3396ff;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="delete" buttonType="RAISED" layoutX="1060.0" layoutY="567.0" onAction="#delete" style="-fx-background-color: #FF5B5B;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="logout" buttonType="RAISED" layoutX="638.0" layoutY="730.0" onAction="#logout" style="-fx-background-color: #FF5B5B;" text="Log out" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clear" buttonType="RAISED" layoutX="723.0" layoutY="568.0" onAction="#clear" style="-fx-background-color: #dadada;" text="Clear">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

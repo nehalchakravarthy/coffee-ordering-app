@@ -63,17 +63,6 @@
             <Insets left="25.0" />
          </padding>
       </JFXTextField>
-      <JFXPasswordField fx:id="password" focusColor="#aeaeae" layoutX="614.0" layoutY="335.0" prefHeight="51.0" prefWidth="281.0" promptText="Enter password" style="-fx-background-color: #E0E0E0;" unFocusColor="#aeaeae">
-         <font>
-            <Font name="Lucida Sans Regular" size="16.0" />
-         </font>
-         <opaqueInsets>
-            <Insets left="50.0" />
-         </opaqueInsets>
-         <padding>
-            <Insets left="25.0" />
-         </padding>
-      </JFXPasswordField>
       <JFXTextField fx:id="phone" focusColor="#aeaeae" layoutX="614.0" layoutY="255.0" prefHeight="51.0" prefWidth="281.0" promptText="Enter phone number" style="-fx-background-color: #e0e0e0;" unFocusColor="#aeaeae">
          <font>
             <Font name="Lucida Sans Regular" size="16.0" />
@@ -85,6 +74,17 @@
             <Insets left="25.0" />
          </padding>
       </JFXTextField>
+      <JFXPasswordField fx:id="password" focusColor="#aeaeae" layoutX="614.0" layoutY="335.0" prefHeight="51.0" prefWidth="281.0" promptText="Enter password" style="-fx-background-color: #E0E0E0;" unFocusColor="#aeaeae">
+         <font>
+            <Font name="Lucida Sans Regular" size="16.0" />
+         </font>
+         <opaqueInsets>
+            <Insets left="50.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="25.0" />
+         </padding>
+      </JFXPasswordField>
       <ImageView fitHeight="46.0" fitWidth="76.0" layoutX="555.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/baseline_person_outline_black_48dp.png" />
