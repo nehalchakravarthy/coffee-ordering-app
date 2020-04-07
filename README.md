@@ -78,23 +78,23 @@ On implementing this application it can be seen that a lot of time and energy of
 - The application allows the customers to create their own account, which can be further utilised so that their menu preferences and payment details can be remembered; a useful function for regular customers.
 
 ## Screenshots
-![](https://drive.google.com/uc?export=view&id=1uv22CatYHHto1T2NxVyMoyvj75quJ6LO)
+![Login](https://github.com/nehalchakravarthy/coffee-ordering-app/blob/master/src/coffee/ordering/app/screenshots/Login.png)
 
 > Login Screen
 
-![](https://drive.google.com/uc?export=view&id=1Q6OVK2q9s_dhrv8B-cwKd6LAPP4-fywv)
+![Signup](https://github.com/nehalchakravarthy/coffee-ordering-app/blob/master/src/coffee/ordering/app/screenshots/Sign%20up.png)
 
 > Signup Screen
 
-![](https://drive.google.com/uc?export=view&id=1mkaPZS2GPlKHR3feVPeZk7pRNqnfMnYM)
+![Order menu](https://github.com/nehalchakravarthy/coffee-ordering-app/blob/master/src/coffee/ordering/app/screenshots/Order%20menu.png)
 
 > Order Screen
 
-![](https://drive.google.com/uc?export=view&id=1a6Zo9U3e4lCej9sIQED2OJ8AuSOwaVk-)
+![Payment](https://github.com/nehalchakravarthy/coffee-ordering-app/blob/master/src/coffee/ordering/app/screenshots/Payment.png)
 
 > Payment Screen
 
-![](https://drive.google.com/uc?export=view&id=1gp9vub6f3YV5lztJ_BRhc0K0uj9uHiWR)
+![Manage Orders](https://github.com/nehalchakravarthy/coffee-ordering-app/blob/master/src/coffee/ordering/app/screenshots/Manage%20orders.png)
 
 > Manage Orders Screen
 
