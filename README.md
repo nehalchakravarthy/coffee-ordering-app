@@ -16,19 +16,55 @@ On implementing this application it can be seen that a lot of time and energy of
 - To provide a simple system to manage orders efficiently when logged in as the admin of the application, granting access to update and delete them.
 
 ## Methodology
-- The application is developed using Apache Netbeans IDE.
+- The application was originally developed using Apache Netbeans IDE.
 
 - The user interface is created using JavaFX frameworks, using the scene builder component integrated with the IDE. The .fxml files contain the codes for UI.
 
-- XAMPP server solution is used to fire up Apache server, in order to link the application to a database created using Maria DB, a commercially supported fork of MySQL. The database can be accessed through the phpMyAdmin portal in the localhost.
+- A controller file for each .fxml file contains the code that links the UI components with their functionalities.
 
 - Java codes are written in the backend to implement all the functionalities and connect to the database. CoffeeOrderingApp.java file contains the main method and is used to run the application. It extends the class “Application”.
 
-- A controller file for each .fxml file contains the code that links the UI components with their functionalities.
+- XAMPP server solution is used to fire up Apache server, in order to link the application to a database created using Maria DB, a commercially supported fork of MySQL. The database can be accessed through the phpMyAdmin portal in the localhost.
+
+- Regular expression is used to set conditions on the password when creating an account. The conditions set are there must be at least one uppercase letter, one lowercase letter and a digit with a length of 8-16 characters.
 
 - Exceptions are handled using try-catch-finally blocks wherever necessary.
 
-- Regular expression is used to set conditions on the password when creating an account.
+## Features
+- User login and signup
+
+- Simple placing of orders using user-friendly UI.
+
+- Manage orders option for admin.
+
+## Instructions to run the application
+1. Install XAMPP
+
+2. Set username as "root" and password ""
+
+3. Open localhost/phpmyadmin
+
+4. Create a database named "CoffeeDB"
+
+5. Create the following tables with the respective fileds:
+    + users
+        + phone     : bigint(10) - Primary Key
+        + username  : varchar(10)
+        + password  : varchar(20)
+    + orders
+        + phone         : varchar(20) - Primary Key
+        + type          : varchar(25)
+        + quantity      : int(2)
+        + whipped cream : tinyint(1)/boolean
+        + chocolate     : tinyint(1)/boolean
+        + nutella       : tinyint(1)/boolean
+        + amount        : int(4)
+        + payment       : varchar(4)
+        + delivery      : tinyint(1)/boolean
+
+6. Run the application
+
+5. To login as admin enter username and password as "admin"
 
 ## Future Scope
 - The application works completely offline. It can be further extended to work online so that users can order from a remote place.
